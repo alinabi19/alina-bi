@@ -1,2 +1,2 @@
 # alina-bi
-Personal portfolio website | Full-Stack .NET Engineer | Azure | React | AI Projects
+Personal portfolio website showcasing my experience, skills, and projects as a Full-Stack .NET Engineer.
