@@ -8,9 +8,16 @@ import HeroSection from "./components/homepage/hero-section";
 // import Projects from "./components/homepage/projects";
 import Skills from "./components/homepage/skills";
 
-async function getData() {
-  const res = await fetch(`https://dev.to/api/articles?username=${personalData.devUsername}`)
+export const revalidate = 0;
 
+async function getData() {
+const res = await fetch(
+    `https://dev.to/api/articles?username=${personalData.devUsername}&per_page=6`,
+    {
+      cache: "no-store",
+    }
+  );
+  
   if (!res.ok) {
     throw new Error('Failed to fetch data')
   }
